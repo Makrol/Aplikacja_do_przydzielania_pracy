@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane prefHeight="492.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.application.UserDialogController">
+   <header>
+      <AnchorPane prefHeight="55.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="251.0" layoutY="5.0" text="Zadanie">
+               <font>
+                  <Font name="System Bold" size="45.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </header>
+   <content>
+      <AnchorPane prefHeight="459.0" prefWidth="645.0">
+         <children>
+            <GridPane layoutX="15.0" layoutY="27.0" prefHeight="437.0" prefWidth="610.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="114.0" minWidth="1.0" prefWidth="30.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="114.0" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="490.0" minWidth="10.0" prefWidth="381.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="92.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="30.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="66.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="89.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="208.0" minHeight="10.0" prefHeight="194.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="71.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <children>
+                        <Button layoutX="253.0" layoutY="6.0" mnemonicParsing="false" onAction="#closeDialog" prefHeight="59.0" prefWidth="123.0" style="-fx-background-color: #0269A4;" text="Zamknij" textFill="WHITE" />
+                        <Button fx:id="finishTaskButton" layoutY="6.0" mnemonicParsing="false" onAction="#finishTask" prefHeight="59.0" prefWidth="123.0" style="-fx-background-color: #0269A4;" text="Ukoncz zadanie" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E8E9EB;" GridPane.columnIndex="2">
+                     <children>
+                        <Label layoutX="8.0" layoutY="14.0" text="Temat:">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font></Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E8E9EB;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <children>
+                        <Label fx:id="subjectShowAdmin" layoutX="4.0" layoutY="6.0" prefHeight="17.0" prefWidth="368.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E8E9EB;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <children>
+                        <Label layoutX="8.0" prefHeight="34.0" prefWidth="120.0" text="Opis:">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font></Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="59.0" prefWidth="188.0" style="-fx-background-color: #E8E9EB;" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <children>
+                        <Label fx:id="descriptionShowAdmin" layoutX="5.0" layoutY="6.0" prefHeight="17.0" prefWidth="367.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </content>
+</DialogPane>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="952.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.application.AdminController">
+   <top>
+      <BorderPane prefHeight="133.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <left>
+            <AnchorPane prefHeight="134.0" prefWidth="250.0" style="-fx-background-color: #e4e4e4;" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <children>
+                  <Label layoutX="1.0" layoutY="14.0" text="imie:" AnchorPane.leftAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="30.0" layoutY="48.0" text="nazwisko:" AnchorPane.leftAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="name_info" layoutX="51.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Text fx:id="surname_info" layoutX="76.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Button fx:id="logoutButton" layoutX="153.0" layoutY="116.0" mnemonicParsing="false" onAction="#logout" prefHeight="70.0" prefWidth="108.0" style="-fx-background-color: #0269A4;" text="Wyloguj" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </AnchorPane>
+         </left>
+         <right>
+            <AnchorPane prefHeight="200.0" prefWidth="261.0" style="-fx-background-color: #2C95B5;" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="-396.0" prefHeight="200.0" prefWidth="670.0" style="-fx-background-color: #0269A4;">
+                     <children>
+                        <Label fx:id="money" layoutX="99.0" layoutY="110.0" textFill="#e4e4e4">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="currency" layoutX="14.0" layoutY="110.0" textFill="#e4e4e4">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="24.0" layoutY="84.0" text="Administratora" textFill="#e4e4e4">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="24.0" layoutY="34.0" text="Panel" textFill="#e4e4e4">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+   </top>
+   <center>
+      <TabPane prefHeight="520.0" prefWidth="904.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Dodaj użytkownika">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane layoutX="275.0" layoutY="91.0" prefHeight="306.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="306.0" prefWidth="942.0" style="-fx-background-color: #DEDEDE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label fx:id="wrongLogin" layoutX="184.0" layoutY="216.0" prefHeight="47.0" prefWidth="233.0" textFill="RED" />
+                              <TextField fx:id="surname" layoutX="393.0" layoutY="120.0" prefWidth="230.0" promptText="Nazwisko" />
+                              <PasswordField fx:id="passwordRegister" layoutX="394.0" layoutY="216.0" prefHeight="25.0" prefWidth="230.0" promptText="Password" />
+                              <Label layoutX="436.0" layoutY="14.0" text="REJESTRACJA">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="395.0" layoutY="145.0" text="Login:" textFill="#030303">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="395.0" layoutY="193.0" text="Hasło:" textFill="#030303">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="registerButton" layoutX="434.0" layoutY="257.0" mnemonicParsing="false" onAction="#userRegister" prefHeight="72.0" prefWidth="149.0" style="-fx-background-color: #0269A4;" text="Dodaj">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="name" layoutX="392.0" layoutY="73.0" prefWidth="230.0" promptText="Imię" />
+                              <Label layoutX="392.0" layoutY="52.0" text="Imię:" textFill="#030303">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="391.0" layoutY="98.0" text="Nazwisko:" textFill="#030303">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="loginRegister" layoutX="393.0" layoutY="164.0" prefWidth="230.0" promptText="Login" />
+                              <Text fx:id="userError" layoutX="449.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="116.0" />
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Dodaj zadanie">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane prefHeight="306.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <AnchorPane prefHeight="364.0" prefWidth="936.0">
+                                 <children>
+                                    <Text fx:id="taskError" layoutX="419.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="132.0" />
+                                    <TextField fx:id="subject" layoutX="282.0" layoutY="54.0" prefHeight="25.0" prefWidth="383.0" promptText="Temat" />
+                                    <TextField fx:id="description" layoutX="280.0" layoutY="91.0" prefHeight="101.0" prefWidth="386.0" promptText="Opis" />
+                                    <Button fx:id="addTaskButton" layoutX="412.0" layoutY="270.0" mnemonicParsing="false" onAction="#addTask" prefHeight="56.0" prefWidth="146.0" style="-fx-background-color: #0269A4;" text="Dodaj">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <ChoiceBox fx:id="chooseUser" layoutX="280.0" layoutY="227.0" maxHeight="200.0" prefHeight="25.0" prefWidth="387.0" />
+                                    <Label layoutX="393.0" layoutY="192.0" text="Wybierz użytkownika:">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="381.0" layoutY="14.0" text="Dodaj zadanie:">
+                                       <font>
+                                          <Font name="System Bold" size="25.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="Przydzielone zadania">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+               </content>
+               <content>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <TableView fx:id="userTaskTable" prefHeight="306.0" prefWidth="951.0" />
+                     </content>
+                  </ScrollPane>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

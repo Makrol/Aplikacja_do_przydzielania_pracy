@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="952.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.application.UserController">
+   <top>
+      <BorderPane prefHeight="133.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <left>
+            <AnchorPane prefHeight="134.0" prefWidth="250.0" style="-fx-background-color: #e4e4e4;" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <children>
+                  <Label layoutX="1.0" layoutY="14.0" text="imie:" AnchorPane.leftAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="30.0" layoutY="48.0" text="nazwisko:" AnchorPane.leftAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="name_info" layoutX="51.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Text fx:id="surname_info" layoutX="76.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Button fx:id="logoutButton" layoutX="153.0" layoutY="116.0" mnemonicParsing="false" onAction="#logout" prefHeight="70.0" prefWidth="108.0" style="-fx-background-color: #0269A4;" text="Wyloguj" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </AnchorPane>
+         </left>
+         <right>
+            <AnchorPane prefHeight="200.0" prefWidth="261.0" style="-fx-background-color: #2C95B5;" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="-396.0" prefHeight="200.0" prefWidth="670.0" style="-fx-background-color: #0269A4;">
+                     <children>
+                        <Label fx:id="money" layoutX="99.0" layoutY="110.0" textFill="#e4e4e4">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="currency" layoutX="14.0" layoutY="110.0" textFill="#e4e4e4">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="24.0" layoutY="84.0" text="Użytkownika" textFill="#e4e4e4">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="24.0" layoutY="34.0" text="Panel" textFill="#e4e4e4">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+   </top>
+   <center>
+      <TabPane prefHeight="520.0" prefWidth="904.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Zadania">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+               </content>
+               <content>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <TableView fx:id="userTaskTable" prefHeight="366.0" prefWidth="951.0" />
+                     </content>
+                  </ScrollPane>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
